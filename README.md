@@ -25,6 +25,8 @@ The stack ships four surfaces from one runtime:
 | 07 | [`examples/07-mcp-stdio-client.ts`](examples/07-mcp-stdio-client.ts) | Connect to the DZap MCP server over stdio |
 | 08 | [`examples/08-http-streaming-client.ts`](examples/08-http-streaming-client.ts) | Consume the `/ask_stream` SSE endpoint |
 | 09 | [`examples/09-transaction-confirmation.ts`](examples/09-transaction-confirmation.ts) | Gate on-chain execution with a confirmation handler |
+| 10 | [`examples/10-portfolio-analyst.ts`](examples/10-portfolio-analyst.ts) | **Extensive:** a multi-phase portfolio analyst (gather → brief → strategize → audit) |
+| 11 | [`examples/11-custom-agent-over-mcp.ts`](examples/11-custom-agent-over-mcp.ts) | **Extensive:** build your own multi-step agent over MCP with OpenAI tool-calling |
 
 ## Setup
 
