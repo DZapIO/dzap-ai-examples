@@ -8,6 +8,13 @@
 import "dotenv/config";
 import type { Metadata } from "dzapai";
 
+// Keep example output focused on the DZap concepts. The SDK logs through winston
+// at the level named by LOG_LEVEL, read once when the runtime is first imported —
+// so this default must be set before `dzapai` is imported. That is why every
+// example imports this module *before* `dzapai`. Set LOG_LEVEL=info (or debug)
+// in your environment to watch the agent's internal tool calls.
+process.env.LOG_LEVEL ??= "error";
+
 /** A well-known public address, used by read-only examples (Vitalik's wallet). */
 export const DEMO_WALLET_ADDRESS =
   process.env.DEMO_WALLET_ADDRESS?.trim() ||
