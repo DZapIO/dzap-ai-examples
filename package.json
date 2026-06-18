@@ -1,0 +1,31 @@
+{
+  "name": "dzap-ai-examples",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Runnable, documented examples for the DZap AI stack: SDK, tools, sessions, RAG, MCP, and the HTTP server.",
+  "scripts": {
+    "example:01": "tsx examples/01-quickstart.ts",
+    "example:02": "tsx examples/02-streaming-steps.ts",
+    "example:03": "tsx examples/03-direct-tools.ts",
+    "example:04": "tsx examples/04-price-and-valuation.ts",
+    "example:05": "tsx examples/05-sessions-and-history.ts",
+    "example:06": "tsx examples/06-rag-over-docs.ts",
+    "example:07": "tsx examples/07-mcp-stdio-client.ts",
+    "example:08": "tsx examples/08-http-streaming-client.ts",
+    "example:09": "tsx examples/09-transaction-confirmation.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.26.0",
+    "dotenv": "^16.4.7",
+    "dzapai": "file:../DZapAI"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
