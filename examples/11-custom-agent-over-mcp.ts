@@ -53,8 +53,9 @@ async function main(): Promise<void> {
   try {
     // 2. Use the server's published system prompt (a RESOURCE) to steer the model.
     const promptResource = await mcp.readResource({ uri: "dzap://prompts/system" });
+    const firstContent = promptResource.contents[0];
     const systemPrompt =
-      (promptResource.contents[0]?.text as string | undefined)?.slice(0, 4000) ??
+      (firstContent && "text" in firstContent ? (firstContent.text as string) : undefined)?.slice(0, 4000) ??
       "You are a helpful DeFi assistant.";
 
     // 3. Bridge MCP tools → OpenAI tools. Expose read-only tools only.
